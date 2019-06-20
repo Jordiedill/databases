@@ -2,11 +2,18 @@ CREATE DATABASE chat;
 
 USE chat;
 
-CREATE TABLE chat (
-  id int auto_increment primary key,
-   message varchar(160),
-   room varchar(20),
-   name varchar(20)
+CREATE TABLE messages (
+  id int auto_increment not null,
+  userid int not null,
+  text varchar(160) not null,
+  room varchar(20) not null,
+  primary key (ID)
+);
+
+CREATE TABLE users (
+  id int auto_increment not null,
+  username varchar(20) not null,
+  primary key (ID)
 );
 
 
